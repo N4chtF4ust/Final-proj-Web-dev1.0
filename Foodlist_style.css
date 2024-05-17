@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+
+body {
+   
+    font-family: "Freeman", sans-serif;
+    background-image: url('Foodlist_photo/background_sushi.jpg');
+   
+    color: white;
+   display: grid;
+   place-items: center;
+
+   
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+  
+    
+
+}
+
+.flex-header{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 35vw;
+  height: 4vh;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+  padding:1%;
+
+  
+}
+
+.menu {
+  position: relative;
+  color: white;
+  width: 40%; 
+  height: 100%;
+  border: 2px solid white;
+  box-sizing: border-box; 
+  display: flex;  
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.back {
+  position: relative;
+  box-sizing: border-box;
+ 
+  border: 2px solid white;
+
+             
+  width: 10%; 
+  height: 100%;
+
+  border-radius: 10px 0 0 10px; 
+  cursor: pointer;
+
+  transition: transform 0.2s;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-triangle{
+  position: relative;
+  width: 0;
+	height: 0;
+	border-top: .8vh solid transparent;
+	border-right: 1.8vh solid #ffffff;
+	border-bottom: .8vh solid transparent;
+  position: fixed;
+}
+
+.back:hover{
+  background-color:#da1b3d;
+  transition: .5s ease-in-out;
+}
+
+.back,.menu{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.rectangle-background{
+  margin: 0;
+ 
+  background-color: rgba(0, 0, 0, 0.63);
+  backdrop-filter: blur(10px) ;
+ 
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  height: 90vh; 
+  box-shadow:10px 10px 20px rgb(26, 25, 25);
+  border-radius: 40px; 
+  
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 1%;
+  padding-bottom: 1%;
+ 
+}
+
+
+
+.carousel li img, .carousel li, .carousel {
+  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.center{
+  position: relative;
+  margin:0;
+  width: 40%;
+  height: 90%;
+ 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  
+  
+  
+ 
+}
+
+.flex, .carousel-wrapper, .center, .carousel ul{
+  display: flex;
+}
+
+.carousel-wrapper {
+  position: relative;
+place-content: center;
+ 
+  width: 80%;
+  height: 93%;
+  
+
+  display: grid;
+  
+ 
+ 
+}
+
+.carousel-wrapper input {
+ display: none;
+}
+
+.carousel {
+  height: 98%;
+  width: 100%;
+
+  
+
+  
+
+  
+  border-radius: 15px;
+  overflow: hidden;
+  
+  cursor: pointer;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  z-index: 1;
+}
+
+.carousel:hover{
+  transform: scale(1.05);
+  
+  transition: .1s ease-in-out;
+}
+
+.carousel ul {
+ 
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 1100%;
+  transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#slide1:checked ~ .carousel ul {
+  left: 0%;
+}
+
+#slide2:checked ~ .carousel ul {
+  left: -100%;
+}
+
+#slide3:checked ~ .carousel ul {
+  left: -200%;
+}
+
+#slide4:checked ~ .carousel ul {
+  left: -300%;
+}
+
+#slide5:checked ~ .carousel ul {
+  left: -400%;
+}
+
+#slide6:checked ~ .carousel ul {
+  left: -500%;
+}
+
+#slide7:checked ~ .carousel ul {
+  left: -600%;
+}
+
+#slide8:checked ~ .carousel ul {
+  left: -700%;
+}
+
+#slide9:checked ~ .carousel ul {
+  left: -800%;
+}
+
+#slide10:checked ~ .carousel ul {
+  left: -900%;
+}
+
+#slide11:checked ~ .carousel ul {
+  left: -1000%;
+ 
+}
+
+.right-arrow,.left-arrow {
+  display: none;
+  width: 7%;
+  height: 7%;
+
+  background-color:white ;
+  position: absolute;
+  cursor: pointer; 
+  top: 45%;
+  transition: 0.2s;
+}
+
+.left-arrow{
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+}
+
+.right-arrow {  
+  clip-path: polygon(100% 50%, 0 0, 0 100%);
+}
+.right-arrow:hover, .left-arrow:hover {
+  transform: scale(1.2);
+  background-color: #da1b3d;
+  transition: .1s ease-in-out;
+}
+.right-arrow:active, .left-arrow:active {
+  transform: scale(0.9);
+}
+
+.left-arrow {
+  left: -15%;
+}
+
+.right-arrow {
+  right: -15%;
+}
+
+#slide1:checked ~ .left-arrow[for=slide11], #slide1:checked ~ .right-arrow[for=slide2] {
+  display: block;
+
+  
+
+}
+
+#slide2:checked ~ .left-arrow[for=slide1], #slide2:checked ~ .right-arrow[for=slide3] {
+  display: block;
+}
+
+#slide3:checked ~ .left-arrow[for=slide2], #slide3:checked ~ .right-arrow[for=slide4] {
+  display: block;
+}
+
+#slide4:checked ~ .left-arrow[for=slide3], #slide4:checked ~ .right-arrow[for=slide5] {
+  display: block;
+}
+
+#slide5:checked ~ .left-arrow[for=slide4], #slide5:checked ~ .right-arrow[for=slide6] {
+  display: block;
+}
+
+#slide6:checked ~ .left-arrow[for=slide5], #slide6:checked ~ .right-arrow[for=slide7] {
+  display: block;
+}
+
+#slide7:checked ~ .left-arrow[for=slide6], #slide7:checked ~ .right-arrow[for=slide8] {
+  display: block;
+}
+
+#slide8:checked ~ .left-arrow[for=slide7], #slide8:checked ~ .right-arrow[for=slide9] {
+  display: block;
+}
+
+#slide9:checked ~ .left-arrow[for=slide8], #slide9:checked ~ .right-arrow[for=slide10] {
+  display: block;
+}
+
+#slide10:checked ~ .left-arrow[for=slide9], #slide10:checked ~ .right-arrow[for=slide11] {
+  display: block;
+}
+
+#slide11:checked ~ .left-arrow[for=slide10],#slide11:checked ~.right-arrow[for=slide1]  {
+  display:block;
+}
+
+
+
+  .nav-dot {  
+    cursor: pointer; 
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    padding: 0;
+    left: 50%; 
+    transform: translateX(-50%); 
+    border:1px solid white;
+    border-radius: 50%;
+  }
+
+ 
+  
+
+  .nav-dot[for=slide1] {
+    left: 0;
+  }
+
+  .nav-dot[for=slide2] {
+    left: 10%;
+  }
+
+  .nav-dot[for=slide3] {
+    left: 20%;
+  }
+
+  .nav-dot[for=slide4] {
+    left: 30%;
+  }
+
+  .nav-dot[for=slide5] {
+    left: 40%;
+  }
+
+  .nav-dot[for=slide6] {
+    left: 50%;
+  }
+
+  .nav-dot[for=slide7] {
+    left: 60%;
+  }
+
+  .nav-dot[for=slide8] {
+    left: 70%;
+  }
+
+  .nav-dot[for=slide9] {
+    left: 80%;
+  }
+
+  .nav-dot[for=slide10] {
+    left: 90%;
+  }
+
+  .nav-dot[for=slide11] {
+    left: 100%;
+  }
+
+#slide1:checked ~ .nav-dot[for="slide1"],
+#slide2:checked ~ .nav-dot[for="slide2"],
+#slide3:checked ~ .nav-dot[for="slide3"],
+#slide4:checked ~ .nav-dot[for="slide4"],
+#slide5:checked ~ .nav-dot[for="slide5"],
+#slide6:checked ~ .nav-dot[for="slide6"],
+#slide7:checked ~ .nav-dot[for="slide7"],
+#slide8:checked ~ .nav-dot[for="slide8"],
+#slide9:checked ~ .nav-dot[for="slide9"],
+#slide10:checked ~ .nav-dot[for="slide10"],
+#slide11:checked ~ .nav-dot[for="slide11"] {
+  background-color:#da1b3d;
+}
+
+
+
+/* Mobile (portrait and landscape) */
+@media screen and (max-width: 896px) {
+  .center {
+    width: 90%;
+  }
+  .back {
+    width: 30%;
+  }
+  .menu {
+    width: 80%;
+  }
+  .menu h2 {
+    font-size: 1.3vh;
+  }
+  .nav-dot {
+    width: 5px;
+    height: 5px;
+  }
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 896px) and (orientation: landscape) {
+  .center {
+    width: 30%;
+  }
+  .back {
+    width: 10%;
+  }
+  .menu {
+    width: 30%;
+  }
+  .menu h2 {
+    font-size: 1.3vh;
+  }
+  .nav-dot {
+    width: 5px;
+    height: 5px;
+  }
+}
+
+/* Tablet Portrait and Landscape */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .center {
+    width: 70%;
+  }
+  .back {
+    width: 15%;
+  }
+  .menu {
+    width: 45%;
+  }
+  .menu h2 {
+    font-size: 1.5vh;
+  }
+
+  .nav-dot{
+    width: 5px;
+    height: 5px;
+  }
+}
+
+/* Tablet Landscape */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .center {
+    width: 30%;
+  }
+  .back {
+    width: 10%;
+  }
+  .menu {
+    width: 40%;
+  }
+  .menu h2 {
+    font-size: 1.5vh;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .center {
+    width: 40%;
+  }
+  .back {
+    width: 15%;
+  }
+  .menu {
+    width: 45%;
+  }
+  .menu h2 {
+    font-size: 1.5vh;
+  }
+}
+
+/* Desktop Portrait */
+@media screen and (min-width: 1024px) and (orientation: portrait) {
+  .center {
+    width: 60%;
+  }
+}

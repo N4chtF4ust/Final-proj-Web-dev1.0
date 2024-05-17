@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+
+body {
+   
+    font-family: "Freeman", sans-serif;
+    background-image: url('Foodlist_photo/background_sushi.jpg');
+  
+    color: white;
+    display: grid;
+    place-items: center;
+
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+       
+}
+
+.flex-header{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 34.181vw;
+  height: 4vh;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+  padding:1%;
+  
+
+  
+}
+
+.menu {
+  position: relative;
+  color: white;
+  width: 40%; 
+  height: 100%;
+  border: 2px solid white;
+  box-sizing: border-box; 
+  display: flex;  
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.back {
+  position: relative;
+  box-sizing: border-box;
+ 
+  border: 2px solid white;
+
+             
+  width: 10%; 
+  height: 100%;
+
+  border-radius: 10px 0 0 10px; 
+  cursor: pointer;
+
+  transition: transform 0.2s;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-triangle{
+  position: relative;
+  width: 0;
+	height: 0;
+	border-top: .8vh solid transparent;
+	border-right: 1.8vh solid #ffffff;
+	border-bottom: .8vh solid transparent;
+  position: fixed;
+}
+
+.back:hover{
+  background-color:#da1b3d;
+  transition: .5s ease-in-out;
+}
+
+.back,.menu{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.rectangle-background{
+  
+  
+  background-color: rgba(0, 0, 0, 0.63);
+  backdrop-filter: blur(10px) ;
+ 
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  height: 90vh; 
+  box-shadow:10px 10px 20px rgb(26, 25, 25);
+  border-radius: 40px; 
+  
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 1%;
+  padding-bottom: 1%;
+ 
+}
+
+
+
+
+.center{
+  position: relative;
+  display: flex;
+  margin:0;
+  width: 40%;
+  height: 90%;
+    
+  margin: 0;
+
+
+  
+ 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    
+  
+ 
+}
+
+.location{
+    
+    width: 90%;
+    height: 95%;
+    border-radius: 15px;
+}
+
+
+
+/* Mobile (portrait and landscape) */
+@media screen and (max-width: 896px) {
+  .center {
+    width: 90%;
+  }
+  .back {
+    width: 30%;
+  }
+  .menu {
+    width: 80%;
+  }
+  .menu h2 {
+    font-size: 1.3vh;
+  }
+  .nav-dot {
+    width: 5px;
+    height: 5px;
+  }
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 896px) and (orientation: landscape) {
+  .center {
+    width: 30%;
+  }
+  .back {
+    width: 10%;
+  }
+  .menu {
+    width: 30%;
+  }
+  .menu h2 {
+    font-size: 1.3vh;
+  }
+  .nav-dot {
+    width: 5px;
+    height: 5px;
+  }
+}
+
+/* Tablet Portrait and Landscape */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .center {
+    width: 70%;
+  }
+  .back {
+    width: 15%;
+  }
+  .menu {
+    width: 45%;
+  }
+  .menu h2 {
+    font-size: 1.5vh;
+  }
+}
+
+/* Tablet Landscape */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .center {
+    width: 30%;
+  }
+  .back {
+    width: 10%;
+  }
+  .menu {
+    width: 40%;
+  }
+  .menu h2 {
+    font-size: 1.5vh;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .center {
+    width: 40%;
+  }
+  .back {
+    width: 15%;
+  }
+  .menu {
+    width: 45%;
+  }
+  .menu h2 {
+    font-size: 1.5vh;
+  }
+}
+
+/* Desktop Portrait */
+@media screen and (min-width: 1024px) and (orientation: portrait) {
+  .center {
+    width: 60%;
+  }
+}
