@@ -9,7 +9,7 @@ body
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #a70000;
+    background-color: #740000;
     /*background-image: url('sushi_bg.jpg');*/
     background-repeat: no-repeat;
     background-size: cover; 
